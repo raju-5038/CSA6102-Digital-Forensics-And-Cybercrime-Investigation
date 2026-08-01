@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPwMmBNMdtuASSBnTPzBaMK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/raju-5038/CSA6102-Digital-Forensics-And-Cybercrime-Investigation/blob/main/Error%20Analysis%20Assessment\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "custody_log = []\n",
+        "\n",
+        "def add_entry(evidence_id, handler, action):\n",
+        "    entry = {\n",
+        "        'evidence_id': evidence_id,\n",
+        "        'handler': handler,\n",
+        "        'action': action\n",
+        "    }\n",
+        "    custody_log.append(entry)\n",
+        "\n",
+        "def print_log():\n",
+        "    for entry in custody_log:\n",
+        "        print(entry['evidence_id'] + \" - \" + entry['handler'] + \" - \" + entry['action'])\n",
+        "\n",
+        "add_entry('EVD-101', 'A.Kumar', 'Collected')\n",
+        "add_entry('EVD-101', 'S.Rao', 'Analysed')\n",
+        "\n",
+        "print_log()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tDxLom-SgO3i",
+        "outputId": "cd685f3f-58f7-4663-84b6-f306b773b7dc"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "EVD-101 - A.Kumar - Collected\n",
+            "EVD-101 - S.Rao - Analysed\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
