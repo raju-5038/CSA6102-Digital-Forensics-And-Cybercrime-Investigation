@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNN9Emxs2uALtr8S6x268kH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/raju-5038/CSA6102-Digital-Forensics-And-Cybercrime-Investigation/blob/main/exp.6\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "volatile_sources = ['RAM', 'Cache', 'Running Processes', 'Network Connections']\n",
+        "\n",
+        "def classify(source):\n",
+        "    if source in volatile_sources:\n",
+        "        return 'Volatile'\n",
+        "    else:\n",
+        "        return 'Non-Volatile'\n",
+        "\n",
+        "evidence_sources = ['RAM', 'Hard Disk', 'Cache', 'Registry Files']\n",
+        "for src in evidence_sources:\n",
+        "    print(src, ':', classify(src))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tsScDS-Gi2jt",
+        "outputId": "92fd1a28-a9b0-4590-b1f0-c3d4b6710621"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "RAM : Volatile\n",
+            "Hard Disk : Non-Volatile\n",
+            "Cache : Volatile\n",
+            "Registry Files : Non-Volatile\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
